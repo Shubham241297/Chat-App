@@ -1,71 +1,153 @@
-# Getting Started with Create React App
+# react-app-simple-chat-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Simple Chat Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs), [Express JS](https://expressjs.com/en/api.html) and [MongoDB](https://docs.mongodb.com/).
 
-## Available Scripts
+This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are
+combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/).
 
-In the project directory, you can run:
+ES6 `module` creation along with `import /export` is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code. To install all the dependecies `npm` is used.
 
-### `npm start`
+Back end is implemented using [Node JS](https://nodejs.org/en/docs), [Express JS](https://expressjs.com/en/api.html) and [MongoDB](https://docs.mongodb.com/). [Atlas](https://www.mongodb.com/cloud/atlas), the _Cloud_ version of [MongoDB](https://docs.mongodb.com/) is used. Real time communication is done using [Socket.io](https://www.npmjs.com/package/socket.io)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used. [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout), the new feature of [CSS3](https://www.w3schools.com/css/) is used for layout creation purpose.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a _responsive web application_ for viewing in both Mobile and Desktop.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Code is rewritten with [React JS 17](https://reactjs.org/docs/getting-started.html) and [Node JS 17](https://nodejs.org/en/docs/)
+- Latest features of JavaScript i.e. ES6, ES7, ES8 is used
+- [React JS Hooks](https://reactjs.org/docs/hooks-intro.html) are used with Functional components
+- ES8 `async/await` is used
 
-### `npm run build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<ul>
+ <li> This is Simple Chat Application </li>
+ <li> It is a Full Stack Application </li>
+</ul>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- All the user details, rooms and conversations are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This is a _free/ shared_ account on [Atlas](https://www.mongodb.com/cloud/atlas). **So Please use it wisely**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<ul>
+ <li>Login as well as Logout feature is added </li>
+ <li>Error will be shown if the credentials are not correct</li>
+</ul>
 
-### `npm run eject`
+- _for simplicity passwords are not encrypted_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<ul>
+ <li> Real time communication is supported using <a href="https://www.npmjs.com/package/socket.io">Socket.io</a>
+ <li> Rooms with users are supported </li>
+ <li> Conversation of a specific rooms will be shown on clicking the corresponding room</li>  
+</ul>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- _for mobile screen user can go to the rooms page by clicking the `<-` icon at the end of the screen_
+- Multiline message can be send by hitting `Ctrl + ENTER`
+- To send a message hit `ENTER` key
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<ul>
+ <li> Online / Offline status are shown by the <i>violet dot</i> </li>
+ <li> Read / Unread status of conversation is supported
+ <li> All the conversation are stored in the database i.e. <i>persistant</i>
+ <li> All the timestamps are shown in <i>UTC</i> format to taken into cross browser differences
+</ul>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
+Clone the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone https://github.com/anijitsahu/react-app-simple-chat-app.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Navigate inside the directory:
 
-### Code Splitting
+```
+cd react-app-simple-chat-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install all the necessary dependecies
 
-### Analyzing the Bundle Size
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Now run the server:
 
-### Making a Progressive Web App
+```
+npm run server
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Login to chat
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Open `2` web browser and type`http://localhost:3000` in the address bar to load the application in each of them
+2. In one browser login with username `anijit` and password `anijit123`
+3. In another one login with username `jeetm` and password `jeetm76` and enjoy chatting
 
-### Deployment
+**Test users**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Username | Password  |
+| -------- | --------- |
+| anijit   | anijit123 |
+| jeetm    | jeetm76   |
 
-### `npm run build` fails to minify
+_tested with <img src="screenshots/chrome.png" width="20px" title="Google Chrome">[Google Chrome 89](https://www.google.com/chrome/) and <img src="screenshots/firefox.png" width="25px" title="Firefox Developer edition">[Mozilla Firefox 86](https://www.mozilla.org/en-US/firefox/new/)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# react-chat-app
+## Screenshots
+
+Some screens of the application is given below for better understanding.
+
+Desktop as well as Mobile version of the screenshots are given side by side.
+
+<p> Login Screen <br/> 
+ <img src="screenshots/desktop 1.png" width="590px" title="Login screen"/>
+ <img src="screenshots/mobile 1.png" width="190px" title="Login screen"/> 
+</p>
+ 
+ <p> Entering credentials <br/> 
+ <img src="screenshots/desktop 2.png" width="590px" title="Entering credentials screen"/>
+ <img src="screenshots/mobile 2.png" width="190px" title="Entering credentials screen"/> 
+</p>
+
+<p> After submitting credentials <br/> 
+ <img src="screenshots/desktop 3.png" width="590px" title="After submitting credentials screen"/>
+ <img src="screenshots/mobile 3.png" width="190px" title="After submitting credentials screen"/> 
+</p>
+
+<p> If credentials are not correct <br/> 
+ <img src="screenshots/desktop 4.png" width="590px" title="If credentials are not correct screen"/>
+ <img src="screenshots/mobile 4.png" width="190px" title="If credentials are not correct screen"/> 
+</p>
+
+<p> After a successful login  <br/> 
+ <img src="screenshots/desktop 5.png" width="590px" title="After a successful login screen"/>
+ <img src="screenshots/mobile 5.png" width="190px" title="After a successful login screen"/> 
+</p>
+
+<p> When a new user joins <br/> 
+ <img src="screenshots/desktop 6.png" width="590px" title="When a new user joins screen"/>
+ <img src="screenshots/mobile 6.png" width="190px" title="When a new user joins screen"/> 
+</p>
+
+<p> When a new user joins (2nd browser) <br/> 
+ <img src="screenshots/desktop 7.png" width="590px" title="When a new user joins (2nd browser) screen"/>
+ <img src="screenshots/mobile 7.png" width="190px" title="When a new user joins (2nd browser) screen"/> 
+</p>
+
+<p> Sender type some message <br/> 
+ <img src="screenshots/desktop 9.png" width="590px" title="Sender type some message screen"/>
+ <img src="screenshots/mobile 9.png" width="190px" title="Sender type some message screen"/> 
+</p>
+
+<p> Receiver's room is updated <br/> 
+ <img src="screenshots/desktop 10.png" width="590px" title="Receiver's room is updated screen"/>
+ <img src="screenshots/mobile 10.png" width="190px" title="Receiver's room is updated screen"/> 
+</p>
+
+<p> Logout functionality <br/> 
+ <img src="screenshots/desktop 11.png" width="590px" title="Logout functionality screen"/>
+ <img src="screenshots/mobile 11.png" width="250px" title="Logout functionality screen"/> 
+</p>
